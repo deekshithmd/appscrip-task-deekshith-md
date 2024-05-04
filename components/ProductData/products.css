@@ -1,0 +1,22 @@
+.product-container{
+    display:grid;
+    grid-template-columns: 1fr auto;
+    grid-auto-flow: row dense;
+}
+
+aside{
+      grid-row-start: 1;
+  grid-row-end: -1;
+}
+
+.grid-cols-3{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-cols-4{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.product-list{
+display:grid;
+}
