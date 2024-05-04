@@ -118,10 +118,18 @@ body {
   align-items: center;
 }
 
+.justify-between{
+  justify-content: space-between;
+}
+
 .flex-col{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+.row-gap-10{
+  row-gap: 10px;
 }
 
 .row-gap-16{
@@ -142,6 +150,10 @@ body {
 
 .margin-top-40{
   margin: 40px 0px 0px;
+}
+
+.cursor-pointer{
+  cursor: pointer;
 }
 
 a{

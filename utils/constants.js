@@ -13,7 +13,7 @@ export const FILTERS = [
     },
     {
         label: 'PRICE: HIGH TO LOW',
-        value: 'pricehighttolow'
+        value: 'pricehightolow'
     },
     {
         label: 'PRICE: LOW TO HIGH',

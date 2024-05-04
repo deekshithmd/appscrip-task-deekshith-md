@@ -25,6 +25,9 @@ header{
 .logo-font{
     font-size: 36px;
    font-weight: 800;
+   position: absolute;
+   left:50%;
+   transform: translateX(-50%);
 }
 
 .navigation-bar{
@@ -33,6 +36,7 @@ header{
     align-items: center;
     justify-content: space-between;
     padding:20px 60px;
+    position: relative;
 }
 
 .profile-items{

@@ -5,6 +5,17 @@ main{
   padding: 30px 60px;
 }
 
+header{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header p{
+  text-align: center;
+  max-width: 50%;
+}
+
 /* .main {
   display: flex;
   flex-direction: column;
