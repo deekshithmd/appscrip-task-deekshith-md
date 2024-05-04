@@ -6,7 +6,7 @@ import { reducer } from "@/utils/helpers";
 const DataContext = createContext({});
 
 const DataProvider = ({ children }) => {
-    const [filteredProducts, dispatch] = useReducer(reducer, PRODUCTS);
+    const [filteredProducts, dispatch] = useReducer(reducer, []);
     const [products, setProducts] = useState(PRODUCTS);
 
     return (

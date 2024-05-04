@@ -3,14 +3,12 @@ import { TfiAngleRight } from "react-icons/tfi";
 import { TfiAngleLeft } from "react-icons/tfi";
 import { FILTERS } from "@/utils/constants";
 import { useEffect, useState } from "react";
-import Image from "next/image";
-import clsx from "clsx";
 import { useData } from "@/contexts/DataContext";
-import { filterProducts } from "@/utils/helpers";
 import { Filters } from "../Filters";
 import './products.css'
+import { ProductList } from "../ProductList";
 
-export const ProductData = () => {
+export const ProductSection = () => {
     const [selectedFilter, setSelectedFilter] = useState('');
     const [showFilters, setShowFilters] = useState(false);
     const { products, filteredProducts, dispatch } = useData();
@@ -19,15 +17,13 @@ export const ProductData = () => {
         dispatch({ type: selectedFilter, payload: products })
     }, [selectedFilter])
 
-    console.log('filtered', filteredProducts)
-
     return (
-        <div>
+        <div className="product-section">
             <hr />
             <div className="flex-row justify-between">
                 <div className="flex-row col-gap-12">
-                    <span>123 ITEMS</span>
-                    <div onClick={() => setShowFilters(!showFilters)} className="flex-row cursor-pointer">
+                    <span className="hidden">{filteredProducts?.length} ITEMS</span>
+                    <div onClick={() => setShowFilters(!showFilters)} className="flex-row cursor-pointer hidden">
                         {
                             showFilters ?
                                 <p className="flex-row row-gap-16">
@@ -42,6 +38,7 @@ export const ProductData = () => {
                         }
                     </div>
                 </div>
+                <p className="mobile-filter show-mobile" onClick={() => setShowFilters(!showFilters)}>FILTER <span>|</span></p>
                 <select onChange={(e) => setSelectedFilter(e.target.value)}>
                     <option value="" disabled selected hidden>Select filter</option>
                     {
@@ -58,19 +55,7 @@ export const ProductData = () => {
                 {
                     showFilters && <Filters />
                 }
-                <div className={clsx(showFilters ? 'grid-cols-3' : 'grid-cols-4', "product-list")}>
-                    {
-                        filteredProducts?.map(product => {
-                            return (
-                                <div key={product?.id}>
-                                    <Image src={product?.image} alt={product?.name} width={300} height={399} />
-                                    <p> {product?.name}</p>
-                                    <p>Rs.{product?.price}</p>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
+                <ProductList products={filteredProducts} isFilterShown={showFilters} />
             </div>
         </div>
     )
