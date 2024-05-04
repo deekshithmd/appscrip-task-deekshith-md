@@ -38,7 +38,7 @@ export const ProductSection = () => {
                         }
                     </div>
                 </div>
-                <p className="mobile-filter show-mobile" onClick={() => setShowFilters(!showFilters)}>FILTER <span>|</span></p>
+                <p className="mobile-filter" onClick={() => setShowFilters(!showFilters)}>FILTER <span>|</span></p>
                 <select onChange={(e) => setSelectedFilter(e.target.value)}>
                     <option value="" disabled selected hidden>Select filter</option>
                     {

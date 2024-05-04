@@ -90,7 +90,7 @@ export const Footer = () => {
                     }
                     <hr className="show-mobile" />
                     <h3 className="text-bold payment-section">mettā muse ACCEPTS</h3>
-                    <div className="flex-row col-gap-8">
+                    <div className="flex-row col-gap-8 flex-wrap">
                         <Image src={GooglePay} width={56} height={35} alt="Google Pay Logo" />
                         <Image src={MasterCard} width={56} height={35} alt="Mastercard Logo" />
                         <Image src={Paypal} width={56} height={35} alt="Paypal Logo" />

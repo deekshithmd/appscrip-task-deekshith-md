@@ -25,6 +25,7 @@ header {
 .logo {
   width: 36px;
   height: 36px;
+  cursor: pointer;
 }
 
 .logo-font {
@@ -33,6 +34,7 @@ header {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  cursor: pointer;
 }
 
 .navigation-bar {
@@ -54,6 +56,7 @@ header {
 .profile-icon {
   height: 24px;
   width: 24px;
+  cursor: pointer;
 }
 
 .navigation-items {
@@ -69,6 +72,10 @@ header {
   span {
     cursor: pointer;
   }
+}
+
+option {
+  font-size: 12px;
 }
 
 @media (max-width: 540px) {

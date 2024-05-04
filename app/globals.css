@@ -59,6 +59,11 @@ body {
   justify-content: flex-start;
 }
 
+.flex-wrap {
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
 .row-gap-10 {
   row-gap: 10px;
 }
@@ -102,7 +107,7 @@ a {
 
 @media (max-width: 540px) {
   .hidden {
-    display: none;
+    display: none !important;
   }
   .show-mobile {
     display: block;

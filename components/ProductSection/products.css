@@ -25,7 +25,7 @@ select {
 option {
   font-size: 18px;
   text-align: right;
-  margin: 10px 0px;
+  padding: 20px 5px !important;
   &:checked {
     font-weight: 700;
   }
@@ -68,9 +68,8 @@ aside {
 .mobile-filter {
   font-weight: 700;
   font-size: 14px;
-  position: relative;
   width: 50%;
-  display: flex;
+  display: none;
   justify-content: space-around;
 }
 
@@ -126,5 +125,8 @@ aside {
   option {
     font-size: 10px;
     text-align: right;
+  }
+  .mobile-filter {
+    display: flex;
   }
 }
