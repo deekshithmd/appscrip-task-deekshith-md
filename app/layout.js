@@ -5,7 +5,6 @@ import { Footer } from "@/components/Footer";
 import { DataProvider } from "@/contexts/DataContext";
 import "./globals.css";
 
-// const inter = Inter({ subsets: ["latin"] });
 const simplon = localFont({
   src: [
     {
@@ -33,7 +32,7 @@ const simplon = localFont({
 
 export const metadata = {
   title: "BuyShop",
-  description: "Ecommerce Application",
+  description: "Ecommerce application to buy clothes",
   icons: [{ rel: 'icon', url: Favicon.src }],
 };
 

@@ -12,22 +12,22 @@ export const Header = () => {
     return <header>
         <div className="top">
             <div className="top-item hidden">
-                <Image src={Box} width={16} height={16} alt="box" />
+                <Image src={Box} width={16} height={16} alt="Toast Icon" />
                 <span>Lorem ipsum dolor</span>
             </div>
             <div className="top-item hidden">
-                <Image src={Box} width={16} height={16} alt="box" />
+                <Image src={Box} width={16} height={16} alt="Toast Icon" />
                 <span>Lorem ipsum dolor</span>
             </div>
             <div className="top-item">
-                <Image src={Box} width={16} height={16} alt="box" />
+                <Image src={Box} width={16} height={16} alt="Toast Icon" />
                 <span>Lorem ipsum dolor</span>
             </div>
         </div>
         <div className="navigation-bar">
             <div className="flex-row col-gap-8">
                 <div className="show-mobile"><GiHamburgerMenu size={20} /></div>
-                <Image src={Logo} width={35} height={35} alt="Company-Logo" className="logo" />
+                <Image src={Logo} width={35} height={35} alt="Buyhop Logo" className="logo" />
             </div>
             <span className="logo-font">LOGO</span>
             <div className="profile-items">

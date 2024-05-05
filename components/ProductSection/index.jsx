@@ -5,16 +5,20 @@ import { FILTERS } from "@/utils/constants";
 import { useEffect, useState } from "react";
 import { useData } from "@/contexts/DataContext";
 import { Filters } from "../Filters";
-import './products.css'
 import { ProductList } from "../ProductList";
+import './products.css'
 
 export const ProductSection = () => {
     const [selectedFilter, setSelectedFilter] = useState('');
     const [showFilters, setShowFilters] = useState(false);
-    const { products, filteredProducts, dispatch } = useData();
+    const { products, filteredProducts, dispatch, productList, setProductList } = useData();
 
     useEffect(() => {
-        dispatch({ type: selectedFilter, payload: products })
+        setProductList(products)
+    }, [])
+
+    useEffect(() => {
+        dispatch({ type: selectedFilter, payload: productList })
     }, [selectedFilter])
 
     return (
@@ -55,7 +59,7 @@ export const ProductSection = () => {
                 {
                     showFilters && <Filters />
                 }
-                <ProductList products={filteredProducts} isFilterShown={showFilters} />
+                <ProductList products={productList} isFilterShown={showFilters} />
             </div>
         </div>
     )

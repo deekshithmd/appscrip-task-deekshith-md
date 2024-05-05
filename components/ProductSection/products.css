@@ -34,6 +34,8 @@ option {
 aside {
   grid-row-start: 1;
   grid-row-end: -1;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 
 .grid-cols-3 {
@@ -65,6 +67,12 @@ aside {
   height: 399px;
 }
 
+.product-data {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .mobile-filter {
   font-weight: 700;
   font-size: 14px;
@@ -75,6 +83,12 @@ aside {
 
 .product-section hr {
   margin: 10px 0px;
+}
+
+.unselect {
+  text-decoration: underline;
+  color: #bfc8cd;
+  cursor: pointer;
 }
 
 @media (max-width: 1240px) {
